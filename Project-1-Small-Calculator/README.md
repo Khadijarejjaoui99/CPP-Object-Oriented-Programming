@@ -135,3 +135,5 @@ int main()
 ```
 
 ## Example Output:
+
+<img src="output.png" alt = "Example Output">
