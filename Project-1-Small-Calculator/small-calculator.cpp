@@ -21,7 +21,7 @@ public:
         _LastOperation = "Adding";
     }
 
-    void Subtraction(float Number)
+    void Subtract(float Number)
     {
         _PrevResult = _Result;
         _Result -= Number;
@@ -29,7 +29,7 @@ public:
         _LastOperation = "Subtracting";
     }
 
-    void Multiplication(float Number)
+    void Multiply(float Number)
     {
         _PrevResult = _Result;
         _Result *= Number;
@@ -37,7 +37,7 @@ public:
         _LastOperation = "Multiplying";
     }
 
-    void Division(float Number)
+    void Divide(float Number)
     {
         if (_isZero(Number))
             Number = 1;
@@ -50,7 +50,7 @@ public:
 
     void Clear()
     {
-        _PrevResult = _Result;
+        _PrevResult = 0;
         _Result = 0;
         _LastNumber = 0;
         _LastOperation = "Clear";
@@ -61,6 +61,11 @@ public:
         _Result = _PrevResult;
         _LastNumber = 0;
         _LastOperation = "Cancelling Last Operation";
+    }
+
+    float GetFinalResult()
+    {
+        return _Result;
     }
 
     void PrintResult()
@@ -81,16 +86,16 @@ int main()
     Calculator1.Add(100);
     Calculator1.PrintResult();
 
-    Calculator1.Subtraction(20);
+    Calculator1.Subtract(20);
     Calculator1.PrintResult();
 
-    Calculator1.Division(0);
+    Calculator1.Divide(0);
     Calculator1.PrintResult();
 
-    Calculator1.Division(2);
+    Calculator1.Divide(2);
     Calculator1.PrintResult();
 
-    Calculator1.Multiplication(3);
+    Calculator1.Multiply(3);
     Calculator1.PrintResult();
 
     Calculator1.CancelLastOperation();
@@ -101,6 +106,7 @@ int main()
 
     Calculator1.Clear();
     Calculator1.PrintResult();
+
     system("pause>0");
     return 0;
 }

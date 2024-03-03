@@ -38,7 +38,7 @@ The class clsCalculator contains the following data and method members:
      <br> - Updates the internal state of the calculator by adding Number to the current result.
      <br> - Updates \_LastOperation to indicate the addition.
 
-2. `Subtraction(float Number)`:
+2. `Subtract(float Number)`:
 
    - **Description:** Subtracts the given number from the current result.
    - **Requirements:**
@@ -46,7 +46,7 @@ The class clsCalculator contains the following data and method members:
      <br> - Updates the internal state of the calculator by subtracting Number from the current result.
      <br> - Updates \_LastOperation to indicate the subtraction.
 
-3. `Multiplication(float Number)`:
+3. `Multiply(float Number)`:
 
    - **Description:** Multiplies the current result by the given number.
    - **Requirements:**
@@ -54,7 +54,7 @@ The class clsCalculator contains the following data and method members:
      <br> - Updates the internal state of the calculator by multiplying the current result by Number.
      <br> - Updates \_LastOperation to indicate the multiplication.
 
-4. `Division(float Number)`:
+4. `Divide(float Number)`:
 
    - **Description:** Divides the current result by the given number. Handles division by zero by defaulting to 1.
    - **Requirements:**
@@ -105,19 +105,19 @@ int main()
     Calculator1.Add(10);
     Calculator1.PrintResult();
 
-    Calculator1.Add(100);
+   Calculator1.Add(100);
     Calculator1.PrintResult();
 
-    Calculator1.Subtraction(20);
+    Calculator1.Subtract(20);
     Calculator1.PrintResult();
 
-    Calculator1.Division(0);
+    Calculator1.Divide(0);
     Calculator1.PrintResult();
 
-    Calculator1.Division(2);
+    Calculator1.Divide(2);
     Calculator1.PrintResult();
 
-    Calculator1.Multiplication(3);
+    Calculator1.Multiply(3);
     Calculator1.PrintResult();
 
     Calculator1.CancelLastOperation();
