@@ -34,60 +34,60 @@ The class clsCalculator contains the following data and method members:
 
    - **Description:** Adds the given number to the current result.
    - **Requirements:**
-     <br> # Accepts a float parameter Number representing the value to be added.
-     <br> # Updates the internal state of the calculator by adding Number to the current result.
-     <br> # Updates \_LastOperation to indicate the addition.
+     <br> - Accepts a float parameter Number representing the value to be added.
+     <br> - Updates the internal state of the calculator by adding Number to the current result.
+     <br> - Updates \_LastOperation to indicate the addition.
 
 2. `Substraction(float Number)`:
 
    - **Description:** Subtracts the given number from the current result.
    - **Requirements:**
-     <br> # Accepts a float parameter Number representing the value to be subtracted.
-     <br> # Updates the internal state of the calculator by subtracting Number from the current result.
-     <br> # Updates \_LastOperation to indicate the subtraction.
+     <br> - Accepts a float parameter Number representing the value to be subtracted.
+     <br> - Updates the internal state of the calculator by subtracting Number from the current result.
+     <br> - Updates \_LastOperation to indicate the subtraction.
 
 3. `Multiplication(float Number)`:
 
    - **Description:** Multiplies the current result by the given number.
    - **Requirements:**
-     <br> # Accepts a float parameter Number representing the value to be multiplied.
-     <br> # Updates the internal state of the calculator by multiplying the current result by Number.
-     <br> # Updates \_LastOperation to indicate the multiplication.
+     <br> - Accepts a float parameter Number representing the value to be multiplied.
+     <br> - Updates the internal state of the calculator by multiplying the current result by Number.
+     <br> - Updates \_LastOperation to indicate the multiplication.
 
 4. `Division(float Number)`:
 
    - **Description:** Divides the current result by the given number. Handles division by zero by defaulting to 1.
    - **Requirements:**
-     <br> # Accepts a float parameter Number representing the divisor.
-     <br> # Handles division by zero by setting Number to 1 if it is zero.
-     <br> # Updates the internal state of the calculator by dividing the current result by Number.
-     <br> # Updates \_LastOperation to indicate the division.
+     <br> - Accepts a float parameter Number representing the divisor.
+     <br> - Handles division by zero by setting Number to 1 if it is zero.
+     <br> - Updates the internal state of the calculator by dividing the current result by Number.
+     <br> - Updates \_LastOperation to indicate the division.
 
 5. `Clear()`:
 
    - **Description:** Resets the calculator, setting the result to zero.
    - **Requirements:**
-     <br> # Clears all previous calculations and sets \_Result to zero.
-     <br> # Updates \_LastOperation to indicate a clear operation.
+     <br> - Clears all previous calculations and sets \_Result to zero.
+     <br> - Updates \_LastOperation to indicate a clear operation.
 
 6. `CancelLastOperation()`:
 
    - **Description:** Reverts to the previous result, canceling the last operation.
    - **Requirements:**
-     <br> # Restores the previous result stored in \_PreviousResult.
-     <br> # Clears \_LastNumber and updates \_LastOperation to indicate the cancellation.
+     <br> - Restores the previous result stored in \_PreviousResult.
+     <br> - Clears \_LastNumber and updates \_LastOperation to indicate the cancellation.
 
 7. `GetFinalResult()`:
 
    - **Description:** Retrieves the final result.
    - **Requirements:**
-     <br> # Returns the current result (\_Result) as a float.
+     <br> - Returns the current result (\_Result) as a float.
 
 8. `PrintResult()`:
    - **Description:** Prints the result and details of the last operation.
    - **Requirements:**
-     <br> # Outputs a formatted string to the console indicating the result, the last operation, and the last number involved in the operation.
-     <br> # Example output: "Result after Adding 10 is: 10."
+     <br> - Outputs a formatted string to the console indicating the result, the last operation, and the last number involved in the operation.
+     <br> - Example output: "Result after Adding 10 is: 10."
 
 ## Project Structure:
 
