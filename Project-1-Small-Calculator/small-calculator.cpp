@@ -4,7 +4,7 @@ using namespace std;
 class clsCalculator
 {
 private:
-    float _Result = 0, _LastNumber = 0;
+    float _Result = 0, _LastNumber = 0, _PrevResult;
     string _LastOperation = "";
 
     bool _isZero(float Number)
@@ -15,6 +15,7 @@ private:
 public:
     void Add(float Number)
     {
+        _PrevResult = _Result;
         _Result += Number;
         _LastNumber = Number;
         _LastOperation = "Adding";
@@ -22,6 +23,7 @@ public:
 
     void Subtraction(float Number)
     {
+        _PrevResult = _Result;
         _Result -= Number;
         _LastNumber = Number;
         _LastOperation = "Subtracting";
@@ -29,6 +31,7 @@ public:
 
     void Multiplication(float Number)
     {
+        _PrevResult = _Result;
         _Result *= Number;
         _LastNumber = Number;
         _LastOperation = "Multiplying";
@@ -39,6 +42,7 @@ public:
         if (_isZero(Number))
             Number = 1;
 
+        _PrevResult = _Result;
         _Result /= Number;
         _LastNumber = Number;
         _LastOperation = "Dividing";
@@ -46,9 +50,17 @@ public:
 
     void Clear()
     {
+        _PrevResult = _Result;
         _Result = 0;
         _LastNumber = 0;
         _LastOperation = "Clear";
+    }
+
+    void CancelLastOperation()
+    {
+        _Result = _PrevResult;
+        _LastNumber = 0;
+        _LastOperation = "Cancelling Last Operation";
     }
 
     void PrintResult()
@@ -81,12 +93,14 @@ int main()
     Calculator1.Multiplication(3);
     Calculator1.PrintResult();
 
+    Calculator1.CancelLastOperation();
+    Calculator1.PrintResult();
+
     Calculator1.Add(10);
     Calculator1.PrintResult();
 
     Calculator1.Clear();
     Calculator1.PrintResult();
-
     system("pause>0");
     return 0;
 }
