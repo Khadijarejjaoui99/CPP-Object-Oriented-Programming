@@ -13,17 +13,17 @@ The class clsCalculator contains the following data and method members:
    - **Type:** float
    - **Role:** Stores the current result of the calculator operations.
 
-2. `\_LastOperation`:
+2. `_LastOperation`:
 
    - **Type:** string
    - **Role:** Keeps track of the last operation performed (e.g., addition, subtraction, multiplication, division, clear, cancel).
 
-3. `\_LastNumber`:
+3. `_LastNumber`:
 
    - **Type:** float
    - **Role:** Stores the last number involved in the operation.
 
-4. `\_PreviousResult`:
+4. `_PreviousResult`:
 
    - **Type:** float
    - **Role:** Stores the result before the most recent operation, used for the "CancelLastOperation" functionality.
