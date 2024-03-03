@@ -44,6 +44,13 @@ public:
         _LastOperation = "Dividing";
     }
 
+    void Clear()
+    {
+        _Result = 0;
+        _LastNumber = 0;
+        _LastOperation = "Clear";
+    }
+
     void PrintResult()
     {
         cout << "\n Result After " << _LastOperation << " " << _LastNumber << " is: " << _Result << endl;
@@ -53,6 +60,8 @@ public:
 int main()
 {
     clsCalculator Calculator1;
+
+    Calculator1.Clear();
 
     Calculator1.Add(10);
     Calculator1.PrintResult();
@@ -70,6 +79,12 @@ int main()
     Calculator1.PrintResult();
 
     Calculator1.Multiplication(3);
+    Calculator1.PrintResult();
+
+    Calculator1.Add(10);
+    Calculator1.PrintResult();
+
+    Calculator1.Clear();
     Calculator1.PrintResult();
 
     system("pause>0");
