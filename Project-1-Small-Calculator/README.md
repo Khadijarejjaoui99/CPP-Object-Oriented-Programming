@@ -38,7 +38,7 @@ The class clsCalculator contains the following data and method members:
      <br> - Updates the internal state of the calculator by adding Number to the current result.
      <br> - Updates \_LastOperation to indicate the addition.
 
-2. `Substraction(float Number)`:
+2. `Subtraction(float Number)`:
 
    - **Description:** Subtracts the given number from the current result.
    - **Requirements:**
@@ -108,7 +108,7 @@ int main()
     Calculator1.Add(100);
     Calculator1.PrintResult();
 
-    Calculator1.Substraction(20);
+    Calculator1.Subtraction(20);
     Calculator1.PrintResult();
 
     Calculator1.Division(0);

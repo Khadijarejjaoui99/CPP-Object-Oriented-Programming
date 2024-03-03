@@ -15,6 +15,13 @@ public:
         _LastOperation = "Adding";
     }
 
+    void Subtraction(float Number)
+    {
+        _Result -= Number;
+        _LastNumber = Number;
+        _LastOperation = "Subtracting";
+    }
+
     void PrintResult()
     {
         cout << "\n Result After " << _LastOperation << " " << _LastNumber << " is: " << _Result << endl;
@@ -29,6 +36,9 @@ int main()
     Calculator1.PrintResult();
 
     Calculator1.Add(100);
+    Calculator1.PrintResult();
+
+    Calculator1.Subtraction(20);
     Calculator1.PrintResult();
 
     system("pause>0");
