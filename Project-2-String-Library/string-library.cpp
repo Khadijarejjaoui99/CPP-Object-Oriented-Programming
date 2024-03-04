@@ -43,11 +43,20 @@ int main()
     // Upper All String
 
     cout << "\n Upper String1: "
-         << String1.UpperString();
+         << String1.UpperAllString();
     cout << "\n Upper String2: "
-         << String2.UpperString();
-    cout << "\n Upper All String "
-         << clsString::UpperString("Khadija Rejjaoui") << endl;
+         << String2.UpperAllString();
+    cout << "\n Upper All String: "
+         << clsString::UpperAllString("Khadija Rejjaoui") << endl;
+
+    // Lower All String
+
+    cout << "\n Lower String1: "
+         << String1.LowerAllString();
+    cout << "\n Lower String2: "
+         << String2.LowerAllString();
+    cout << "\n Lower All String: "
+         << clsString::LowerAllString("Khadija Rejjaoui") << endl;
 
     system("pause>0");
     return 0;

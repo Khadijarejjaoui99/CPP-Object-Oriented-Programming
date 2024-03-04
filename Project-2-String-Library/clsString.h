@@ -88,18 +88,29 @@ public:
         return LowerFirstLetterOfEachWord(_Value);
     }
 
-    static string UpperString(string S1)
+    static string UpperAllString(string S1)
     {
         for (short i = 0; i < S1.length(); i++)
-        {
             S1[i] = toupper(S1[i]);
-        }
 
         return S1;
     }
 
-    string UpperString()
+    string UpperAllString()
     {
-        return UpperString(_Value);
+        return UpperAllString(_Value);
+    }
+
+    static string LowerAllString(string S1)
+    {
+        for (short i = 0; i < S1.length(); i++)
+            S1[i] = tolower(S1[i]);
+
+        return S1;
+    }
+
+    string LowerAllString()
+    {
+        return LowerAllString(_Value);
     }
 };
