@@ -17,6 +17,11 @@ int main()
     cout << "\n String1: " << String1.GetValue();
     cout << "\n String2: " << String2.GetValue() << endl;
 
+    // First Letter Of Each Word In String
+    String1.PrintFirstLetterOfEachWord();
+    String2.PrintFirstLetterOfEachWord();
+    clsString::PrintFirstLetterOfEachWord("khadija Rejjaoui");
+
     system("pause>0");
     return 0;
 }
