@@ -31,6 +31,24 @@ int main()
     cout << "\n Upper First Letter of Each word: "
          << clsString::UpperFirstLetterOfEachWord("khadija rejjaoui") << endl;
 
+    // Lower First Letter of Each Word
+
+    cout << "\n Lower First Letter of Each word For String1: "
+         << String1.LowerFirstLetterOfEachWord();
+    cout << "\n Lower First Letter of Each word For String2: "
+         << String2.LowerFirstLetterOfEachWord();
+    cout << "\n Lower First Letter of Each word: "
+         << clsString::LowerFirstLetterOfEachWord("Khadija Rejjaoui") << endl;
+
+    // Upper All String
+
+    cout << "\n Upper String1: "
+         << String1.UpperString();
+    cout << "\n Upper String2: "
+         << String2.UpperString();
+    cout << "\n Upper All String "
+         << clsString::UpperString("Khadija Rejjaoui") << endl;
+
     system("pause>0");
     return 0;
 }

@@ -67,4 +67,39 @@ public:
     {
         return UpperFirstLetterOfEachWord(_Value);
     }
+
+    static string LowerFirstLetterOfEachWord(string S1)
+    {
+        bool isFirstLetter = true;
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (S1[i] != ' ' && isFirstLetter)
+                S1[i] = tolower(S1[i]);
+
+            isFirstLetter = (S1[i] == ' ' ? true : false);
+        }
+
+        return S1;
+    }
+
+    string LowerFirstLetterOfEachWord()
+    {
+        return LowerFirstLetterOfEachWord(_Value);
+    }
+
+    static string UpperString(string S1)
+    {
+        for (short i = 0; i < S1.length(); i++)
+        {
+            S1[i] = toupper(S1[i]);
+        }
+
+        return S1;
+    }
+
+    string UpperString()
+    {
+        return UpperString(_Value);
+    }
 };
