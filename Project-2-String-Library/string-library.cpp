@@ -22,6 +22,15 @@ int main()
     String2.PrintFirstLetterOfEachWord();
     clsString::PrintFirstLetterOfEachWord("khadija Rejjaoui");
 
+    // Upper First Letter of Each Word
+
+    cout << "\n Upper First Letter of Each word For String1: "
+         << String1.UpperFirstLetterOfEachWord();
+    cout << "\n Upper First Letter of Each word For String2: "
+         << String2.UpperFirstLetterOfEachWord();
+    cout << "\n Upper First Letter of Each word: "
+         << clsString::UpperFirstLetterOfEachWord("khadija rejjaoui") << endl;
+
     system("pause>0");
     return 0;
 }
