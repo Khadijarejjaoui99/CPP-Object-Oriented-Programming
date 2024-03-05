@@ -22,6 +22,13 @@ int main()
      cout << "\n Capital Letters Count Of String2: " << String2.CountCapitalLetters();
      cout << "\n Capital Letters Count Of \'Hi, How are yOU Today\': " << clsString::CountCapitalLetters("Hi, How are yOU Today") << endl;
 
+     // Example 3:
+     cout << "\n Example 3:\n";
+
+     cout << "\n Capital Letters Count Of \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::CapitalLetters);
+     cout << "\n Small Letters Count Of \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::SmallLetters);
+     cout << "\n All Letters Count Of \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::All) << endl;
+
      system("pause>0");
      return 0;
 }
