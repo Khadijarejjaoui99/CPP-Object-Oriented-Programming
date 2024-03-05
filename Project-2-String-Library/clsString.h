@@ -1,11 +1,17 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 
 class clsString
 {
 private:
     string _Value;
+
+    static char _InvertLetterCase(char C)
+    {
+        return isupper(C) ? tolower(C) : toupper(C);
+    }
 
 public:
     clsString()
@@ -112,5 +118,20 @@ public:
     string LowerAllString()
     {
         return LowerAllString(_Value);
+    }
+
+    static string InvertAllStringLettersCase(string S1)
+    {
+        for (short i = 0; i < S1.length(); i++)
+        {
+            S1[i] = _InvertLetterCase(S1[i]);
+        }
+
+        return S1;
+    }
+
+    string InvertAllStringLettersCase()
+    {
+        return InvertAllStringLettersCase(_Value);
     }
 };
