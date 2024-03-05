@@ -65,6 +65,12 @@ int main()
      cout << "\n String1 After Inverting its Letters Case: " << String1.GetValue();
      cout << "\n \'Hi, How are yOU Today\' After Inverting its Letters Case: " << clsString::InvertAllLettersCase("Hi, How are yOU Today") << endl;
 
+     // Example 9:
+     cout << "\n Example 9:\n";
+
+     String1.InvertAllLettersCase();
+     cout << "\n Invert Letter i case: " << clsString::InvertLetterCase('i') << endl;
+
      system("pause>0");
      return 0;
 }
