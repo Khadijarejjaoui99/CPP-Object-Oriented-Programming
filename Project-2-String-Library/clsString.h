@@ -13,6 +13,13 @@ private:
         return isupper(C) ? tolower(C) : toupper(C);
     }
 
+    static bool _IsVowel(char Letter)
+    {
+        Letter = tolower(Letter);
+
+        return ((Letter == 'a') || (Letter == 'e') || (Letter == 'i') || (Letter == 'o') || (Letter == 'u'));
+    }
+
 public:
     clsString()
     {
@@ -159,5 +166,23 @@ public:
     short CountLetter(char Letter, bool isMatchCase = true)
     {
         return CountLetter(_Value, Letter, isMatchCase);
+    }
+
+    static short CountVowels(string S1)
+    {
+        short Counter = 0;
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (_IsVowel(S1[i]))
+                Counter++;
+        }
+
+        return Counter;
+    }
+
+    short CountVowels()
+    {
+        return CountVowels(_Value);
     }
 };

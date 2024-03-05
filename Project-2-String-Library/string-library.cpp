@@ -87,6 +87,15 @@ int main()
      cout << "\n Count of Letter j without matching case: "
           << clsString::CountLetter("Khadija ReJJaoui", 'j', false) << endl;
 
+     // Vowels Count in a String:
+
+     cout << "\n Count vowels in String1: "
+          << String1.CountVowels();
+     cout << "\n Count vowels in String2: "
+          << String2.CountVowels();
+     cout << "\n Count vowels: "
+          << clsString::CountVowels("Khadija Rejjaoui") << endl;
+
      system("pause>0");
      return 0;
 }
