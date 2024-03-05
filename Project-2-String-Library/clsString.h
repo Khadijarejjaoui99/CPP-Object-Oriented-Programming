@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class clsString
@@ -255,5 +256,32 @@ public:
     short CountWords()
     {
         return CountWords(_Value);
+    }
+
+    static vector<string> SplitString(string S1, string Delim = " ")
+    {
+        string sWord = "";
+        short pos = 0;
+        vector<string> vString;
+
+        while ((pos = S1.find(Delim)) != std::string::npos)
+        {
+            sWord = S1.substr(0, pos);
+
+            if (sWord != "")
+                vString.push_back(sWord);
+
+            S1.erase(0, pos + Delim.length());
+        }
+
+        if (S1 != "")
+            vString.push_back(S1);
+
+        return vString;
+    }
+
+    vector<string> SplitString(string Delim = "")
+    {
+        return SplitString(_Value, Delim);
     }
 };
