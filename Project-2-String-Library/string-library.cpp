@@ -108,6 +108,12 @@ int main()
      String2.PrintEachWordInString();
      clsString::PrintEachWordInString("Khadija Rejjaoui");
 
+     //
+
+     cout << "\n The number of Words in String1 is: " << String1.CountWords();
+     cout << "\n The number of Words in String2 is: " << String2.CountWords();
+     cout << "\n The number of Words is: " << clsString::CountWords("Khadija Rejjaoui") << endl;
+
      system("pause>0");
      return 0;
 }

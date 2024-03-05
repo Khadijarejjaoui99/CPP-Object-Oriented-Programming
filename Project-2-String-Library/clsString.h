@@ -229,4 +229,31 @@ public:
     {
         PrintEachWordInString(_Value);
     }
+
+    static short CountWords(string S1)
+    {
+        string Delim = " ", sWord = "";
+
+        short pos = 0, Counter = 0;
+
+        while ((pos = S1.find(Delim)) != std::string::npos)
+        {
+            sWord = S1.substr(0, pos);
+
+            if (sWord != "")
+                Counter++;
+
+            S1.erase(0, pos + Delim.length());
+        }
+
+        if (S1 != "")
+            Counter++;
+
+        return Counter;
+    }
+
+    short CountWords()
+    {
+        return CountWords(_Value);
+    }
 };
