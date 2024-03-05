@@ -51,6 +51,13 @@ int main()
      cout << "\n Vowels count in String1: " << String2.CountVowels();
      cout << "\n Vowels count in \'Hi, How are yOU Today\': " << clsString::CountVowels("Hi, How are yOU Today") << endl;
 
+     // Example 7:
+     cout << "\n Example 7:\n";
+
+     cout << "\n Words Count in String1: " << String1.CountWords();
+     cout << "\n Words count in String1: " << String2.CountWords();
+     cout << "\n Words count in \'Hi, How are yOU Today\': " << clsString::CountWords("Hi, How are yOU Today") << endl;
+
      system("pause>0");
      return 0;
 }
