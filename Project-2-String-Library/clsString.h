@@ -331,4 +331,28 @@ public:
     {
         return Trim(_Value);
     }
+
+    static string JoinString(vector<string> vString, string Delim)
+    {
+        string S1 = "";
+
+        for (string &S : vString)
+        {
+            S1 += S + Delim;
+        }
+
+        return S1.substr(0, S1.length() - Delim.length());
+    }
+
+    static string JoinString(string arrString[100], short Length, string Delim)
+    {
+        string S1 = "";
+
+        for (int i = 0; i < Length; i++)
+        {
+            S1 += arrString[i] + Delim;
+        }
+
+        return S1.substr(0, S1.length() - Delim.length());
+    }
 };
