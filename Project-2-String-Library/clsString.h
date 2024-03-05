@@ -203,4 +203,30 @@ public:
     {
         PrintVowels(_Value);
     }
+
+    static void PrintEachWordInString(string S1)
+    {
+        string Delim = " ", sWord = "";
+        short pos = 0;
+
+        cout << "\n Your String Words are:\n";
+
+        while ((pos = S1.find(Delim)) != std::string::npos)
+        {
+            sWord = S1.substr(0, pos);
+
+            if (sWord != "")
+                cout << " " << sWord << endl;
+
+            S1.erase(0, pos + Delim.length());
+        }
+
+        if (S1 != "")
+            cout << " " << S1 << endl;
+    }
+
+    void PrintEachWordInString()
+    {
+        PrintEachWordInString(_Value);
+    }
 };

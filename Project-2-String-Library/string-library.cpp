@@ -102,6 +102,12 @@ int main()
      String2.PrintVowels();
      clsString::PrintVowels("Khadija Rejjaoui");
 
+     // Print Each Word In String
+
+     String1.PrintEachWordInString();
+     String2.PrintEachWordInString();
+     clsString::PrintEachWordInString("Khadija Rejjaoui");
+
      system("pause>0");
      return 0;
 }
