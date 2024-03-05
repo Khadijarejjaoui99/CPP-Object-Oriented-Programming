@@ -423,4 +423,24 @@ public:
     {
         return ReplaceWordInStringUsingSplit(_Value, StringToReplace, sReplaceTo, MatchCase);
     }
+
+    static string RemovePunctuationsInString(string S1)
+    {
+        string S2 = "";
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (!ispunct(S1[i]))
+            {
+                S2 += S1[i];
+            }
+        }
+
+        return S2;
+    }
+
+    string RemovePunctuationsInString()
+    {
+        return RemovePunctuationsInString(_Value);
+    }
 };
