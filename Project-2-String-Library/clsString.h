@@ -355,4 +355,28 @@ public:
 
         return S1.substr(0, S1.length() - Delim.length());
     }
+
+    static string ReverseWordsInString(string S1)
+    {
+        vector<string> vString;
+        string S2 = "";
+
+        vString = SplitString(S1, " ");
+
+        vector<string>::iterator iter = vString.end();
+
+        while (iter != vString.begin())
+        {
+            --iter;
+
+            S2 += *iter + " ";
+        }
+
+        return S2.substr(0, S2.length() - 1);
+    }
+
+    string ReverseWordsInString()
+    {
+        return ReverseWordsInString(_Value);
+    }
 };
