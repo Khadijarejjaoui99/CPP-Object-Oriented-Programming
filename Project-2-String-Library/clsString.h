@@ -134,4 +134,30 @@ public:
     {
         return InvertAllStringLettersCase(_Value);
     }
+
+    static short CountLetter(string S1, char Letter, bool isMatchCase = true)
+    {
+        short Counter = 0;
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (isMatchCase)
+            {
+                if (S1[i] == Letter)
+                    Counter++;
+            }
+            else
+            {
+                if (tolower(S1[i]) == tolower(Letter))
+                    Counter++;
+            }
+        }
+
+        return Counter;
+    }
+
+    short CountLetter(char Letter, bool isMatchCase = true)
+    {
+        return CountLetter(_Value, Letter, isMatchCase);
+    }
 };

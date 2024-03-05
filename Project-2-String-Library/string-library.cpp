@@ -8,7 +8,7 @@ int main()
      clsString String1;
 
      // Using Parametrized Constructor
-     clsString String2("Hello world!");
+     clsString String2("Hello worLd!");
 
      // Setting Value of String1
      String1.SetValue("Programming is fun");
@@ -66,6 +66,26 @@ int main()
           << String2.InvertAllStringLettersCase();
      cout << "\n Invert All letters Case: "
           << clsString::InvertAllStringLettersCase("Khadija Rejjaoui") << endl;
+
+     // Count character in a String
+
+     cout << "\n Invert All letters Case in String1: "
+          << String1.InvertAllStringLettersCase();
+     cout << "\n Invert All letters Case in String2: "
+          << String2.InvertAllStringLettersCase();
+     cout << "\n Invert All letters Case: "
+          << clsString::InvertAllStringLettersCase("Khadija Rejjaoui") << endl;
+
+     // Count Letter in a String:
+
+     cout << "\n Count of Letter l in String2 with matching case: "
+          << String2.CountLetter('l');
+     cout << "\n Count of Letter l in String2 without matching case: "
+          << String2.CountLetter('l', false);
+     cout << "\n Count of Letter j with matching case: "
+          << clsString::CountLetter("Khadija ReJJaoui", 'j') << endl;
+     cout << "\n Count of Letter j without matching case: "
+          << clsString::CountLetter("Khadija ReJJaoui", 'j', false) << endl;
 
      system("pause>0");
      return 0;
