@@ -398,5 +398,29 @@ public:
         return ReplaceWordInStringUsingBuiltInFunction(_Value, StringToReplace, sReplaceTo);
     }
 
-    
+    static string ReplaceWordInStringUsingSplit(string S1, string StringToReplace, string sReplaceTo, bool MatchCase = true)
+    {
+        vector<string> vString = SplitString(S1, " ");
+
+        for (string &s : vString)
+        {
+            if (MatchCase)
+            {
+                if (s == StringToReplace)
+                    s = sReplaceTo;
+            }
+            else
+            {
+                if (LowerAllString(s) == LowerAllString(StringToReplace))
+                    s = sReplaceTo;
+            }
+        }
+
+        return JoinString(vString, " ");
+    }
+
+    string ReplaceWordInStringUsingSplit(string StringToReplace, string sReplaceTo, bool MatchCase = true)
+    {
+        return ReplaceWordInStringUsingSplit(_Value, StringToReplace, sReplaceTo, MatchCase);
+    }
 };
