@@ -96,6 +96,12 @@ int main()
      cout << "\n Count vowels: "
           << clsString::CountVowels("Khadija Rejjaoui") << endl;
 
+     // Print Vowels in a String:
+
+     String1.PrintVowels();
+     String2.PrintVowels();
+     clsString::PrintVowels("Khadija Rejjaoui");
+
      system("pause>0");
      return 0;
 }

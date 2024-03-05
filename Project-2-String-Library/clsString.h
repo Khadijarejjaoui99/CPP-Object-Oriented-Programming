@@ -185,4 +185,22 @@ public:
     {
         return CountVowels(_Value);
     }
+
+    static void PrintVowels(string S1)
+    {
+        cout << "\n Vowels in string are: ";
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (_IsVowel(S1[i]))
+                cout << S1[i] << "  ";
+        }
+
+        cout << endl;
+    }
+
+    void PrintVowels()
+    {
+        PrintVowels(_Value);
+    }
 };
