@@ -208,8 +208,8 @@ int main()
           cout << " " << s << endl;
      }
 
-     // Example 12 Trim(), TrimLeft(), TrimRight():
-     cout << "\n Example 12: TrimLeft(), TrimRight(), Trim()\n";
+     // Example 22 Trim(), TrimLeft(), TrimRight():
+     cout << "\n Example 22: TrimLeft(), TrimRight(), Trim()\n";
 
      clsString String3("   Hello, How are you doing?   ");
      String3.TrimRight();
@@ -222,6 +222,22 @@ int main()
      String3.SetValue("   Hello, How are you doing?   ");
      String3.Trim();
      cout << "\n Trim      : " << String3.GetValue() << endl;
+
+     // Example 23 UpperAllString():
+     cout << "\n Example 23: UpperAllString()\n";
+
+     String1.UpperAllString();
+     cout << "\n String1 After Uppering All its Case: " << String1.GetValue();
+
+     cout << "\n \'" << S1 << "\' After Uppering All its Case: " << clsString::UpperAllString(S1) << endl;
+
+     // Example 24 UpperFirstLetterOfEachWord():
+     cout << "\n Example 24: UpperFirstLetterOfEachWord()\n";
+
+     String2.UpperFirstLetterOfEachWord();
+     cout << "\n String2 After Uppering First Letter Of Each Word: " << String2.GetValue();
+
+     cout << "\n \'" << S1 << "\' After Uppering First Letter Of Each Word: " << clsString::UpperFirstLetterOfEachWord(S1) << endl;
 
      system("pause>0");
 
