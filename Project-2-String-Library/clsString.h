@@ -286,8 +286,6 @@ public:
         string Delim = " ", sWord = "";
         short pos = 0;
 
-        cout << "\n Your String Words are:\n";
-
         while ((pos = S1.find(Delim)) != std::string::npos)
         {
             sWord = S1.substr(0, pos);

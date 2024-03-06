@@ -119,6 +119,16 @@ int main()
 
      cout << "\n \'Hi, How are yOU Today\' After Lowering First Letter Of Each Word: " << clsString::LowerFirstLetterOfEachWord("Hi, How are yOU Today") << endl;
 
+     // Example 15 PrintEachWordInString():
+     cout << "\n Example 15: PrintEachWordInString()\n";
+
+     cout << "\n String1 Words:\n";
+
+     String1.PrintEachWordInString();
+
+     cout << "\n \'Hi, How are yOU Today\' Words:\n";
+     clsString::PrintEachWordInString("Hi, How are yOU Today");
+
      system("pause>0");
 
      return 0;
