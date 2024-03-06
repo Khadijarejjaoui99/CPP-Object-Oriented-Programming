@@ -81,7 +81,7 @@ int main()
      else
           cout << "\n " << Letter << " is NOT a Vowel\n";
 
-     // Example 11:
+     // Example 11 Join():
      cout << "\n Example 11: Join()\n";
 
      vector<string> vString = {"I", "love", "Programming.", "Programming", "is", "Fun."};
@@ -96,6 +96,14 @@ int main()
 
      cout << "\n String From Array with ### delimiter: " << S1 << endl;
 
+     // Example 12 Length():
+     cout << "\n Example 12: Length()\n";
+
+     cout << "\n Length of String1: " << String1.Length();
+     cout << "\n Length of String2: " << String2.Length();
+     cout << "\n Length of \'Hi, How are yOU Today\': " << clsString::Length("Hi, How are yOU Today") << endl;
+
      system("pause>0");
+
      return 0;
 }
