@@ -159,6 +159,17 @@ int main()
      cout << "\n \'This is: a sample text, with punctuations.\'after Removing Punctuations:"
           << clsString::RemovePunctuationsInString("This is: a sample text, with punctuations.") << endl;
 
+     // Example 19 ReplaceWord():
+     cout << "\n Example 19: ReplaceWord()\n";
+
+     cout << "\n String2 after Replacing Programming with Coding:\n\n "
+          << String2.ReplaceWord("Programming", "Coding") << endl;
+
+     cout << "\n Replacing Jordan with Morocco in \'Welcome to Jordan jordan is a nice country.\'(Maching Case):\n\n "
+          << clsString::ReplaceWord("Welcome to Jordan jordan is a nice country", "Jordan", "Morocco", true) << endl;
+
+     cout << "\n Replacing Jordan with Morocco in \'Welcome to Jordan jordan is a nice country.\'(Without Maching Case):\n\n "
+          << clsString::ReplaceWord("Welcome to Jordan jordan is a nice country", "Jordan", "Morocco", false) << endl;
      system("pause>0");
 
      return 0;
