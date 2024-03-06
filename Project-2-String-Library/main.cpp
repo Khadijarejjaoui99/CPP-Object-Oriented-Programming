@@ -181,6 +181,31 @@ int main()
          << "\n \'Welcome to Jordan jordan is a nice country.\'fter Reversing its Words: "
          << clsString::ReverseWords("Welcome to Jordan jordan is a nice country") << endl;
 
+     // Example 21 ReverseWords():
+     cout << "\n Example 21: Split()\n";
+
+     cout << "\n String2 to Vector:\n";
+
+     vString = String2.Split(" ");
+
+     cout << "\n Tokens = " << vString.size() << endl;
+
+     for (string &s : vString)
+     {
+          cout << " " << s << endl;
+     }
+
+     cout << "\n \'Hello World! Programming is Fun.\' to Vector:\n";
+
+     vString = clsString::Split("Hello World! Programming is Fun.", " ");
+
+     cout << "\n Tokens = " << vString.size() << endl;
+
+     for (string &s : vString)
+     {
+          cout << " " << s << endl;
+     }
+
      system("pause>0");
 
      return 0;

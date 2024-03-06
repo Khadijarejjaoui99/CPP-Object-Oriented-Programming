@@ -330,7 +330,7 @@ public:
         return CountWords(_Value);
     }
 
-    static vector<string> Split(string S1, string Delim = " ")
+    static vector<string> Split(string S1, string Delim)
     {
         string sWord = "";
         short pos = 0;
@@ -352,7 +352,7 @@ public:
         return vString;
     }
 
-    vector<string> Split(string Delim = "")
+    vector<string> Split(string Delim)
     {
         return Split(_Value, Delim);
     }
