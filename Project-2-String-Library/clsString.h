@@ -428,7 +428,7 @@ public:
         return S1.substr(0, S1.length() - Delim.length());
     }
 
-    static string ReverseWordsInString(string S1)
+    static string ReverseWords(string S1)
     {
         vector<string> vString;
         string S2 = "";
@@ -447,9 +447,9 @@ public:
         return S2.substr(0, S2.length() - 1);
     }
 
-    void ReverseWordsInString()
+    void ReverseWords()
     {
-        _Value = ReverseWordsInString(_Value);
+        _Value = ReverseWords(_Value);
     }
 
     static string ReplaceWord(string S1, string StringToReplace, string sReplaceTo, bool MatchCase = true)

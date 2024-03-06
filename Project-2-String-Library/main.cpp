@@ -170,6 +170,17 @@ int main()
 
      cout << "\n Replacing Jordan with Morocco in \'Welcome to Jordan jordan is a nice country.\'(Without Maching Case):\n\n "
           << clsString::ReplaceWord("Welcome to Jordan jordan is a nice country", "Jordan", "Morocco", false) << endl;
+
+     // Example 20 ReverseWords():
+     cout << "\n Example 20: ReverseWords()\n";
+
+     String2.ReverseWords();
+     cout << "\n String2 after Reversing its Words: " << String2.GetValue() << endl;
+
+     cout
+         << "\n \'Welcome to Jordan jordan is a nice country.\'fter Reversing its Words: "
+         << clsString::ReverseWords("Welcome to Jordan jordan is a nice country") << endl;
+
      system("pause>0");
 
      return 0;
