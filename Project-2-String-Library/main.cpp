@@ -109,7 +109,15 @@ int main()
      String1.LowerAllString();
      cout << "\n String1 After Lowering All its Case: " << String1.GetValue();
 
-     cout << "\n  \'Hi, How are yOU Today\' After Lowering All its Case: " << clsString::LowerAllString("Hi, How are yOU Today") << endl;
+     cout << "\n \'Hi, How are yOU Today\' After Lowering All its Case: " << clsString::LowerAllString("Hi, How are yOU Today") << endl;
+
+     // Example 14 LowerFirstLetterOfEachWord():
+     cout << "\n Example 14: LowerFirstLetterOfEachWord()\n";
+
+     String1.LowerFirstLetterOfEachWord();
+     cout << "\n String1 After Lowering First Letter Of Each Word: " << String1.GetValue();
+
+     cout << "\n \'Hi, How are yOU Today\' After Lowering First Letter Of Each Word: " << clsString::LowerFirstLetterOfEachWord("Hi, How are yOU Today") << endl;
 
      system("pause>0");
 
