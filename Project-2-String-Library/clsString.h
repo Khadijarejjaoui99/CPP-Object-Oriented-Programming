@@ -44,8 +44,6 @@ public:
     {
         bool isFirstLetter = true;
 
-        cout << "\n First Letter in each Word:\n";
-
         for (short i = 0; i < S1.length(); i++)
         {
             if (S1[i] != ' ' && isFirstLetter)

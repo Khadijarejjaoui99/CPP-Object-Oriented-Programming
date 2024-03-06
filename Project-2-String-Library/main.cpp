@@ -129,6 +129,16 @@ int main()
      cout << "\n \'Hi, How are yOU Today\' Words:\n";
      clsString::PrintEachWordInString("Hi, How are yOU Today");
 
+     // Example 16 PrintEachWordInString():
+     cout << "\n Example 16: PrintFirstLetterOfEachWord()\n";
+
+     cout << "\n First Letter Of Each Word in String1:\n";
+
+     String1.PrintFirstLetterOfEachWord();
+
+     cout << "\n First Letter Of Each Word in \'Hi, How are yOU Today\':\n";
+     clsString::PrintFirstLetterOfEachWord("Hi, How are yOU Today");
+
      system("pause>0");
 
      return 0;
