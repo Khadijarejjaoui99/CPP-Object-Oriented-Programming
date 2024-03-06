@@ -473,7 +473,7 @@ public:
         return Join(vString, " ");
     }
 
-    string ReplaceWord(string StringToReplace, string sReplaceTo, bool MatchCase = true)
+    string ReplaceWord(string StringToReplace, string sReplaceTo, bool MatchCase)
     {
         return ReplaceWord(_Value, StringToReplace, sReplaceTo, MatchCase);
     }

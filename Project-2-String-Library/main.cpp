@@ -20,50 +20,52 @@ int main()
 
      cout << "\n Capital Letters Count in String1: " << String1.CountCapitalLetters();
      cout << "\n Capital Letters Count in String2: " << String2.CountCapitalLetters();
-     cout << "\n Capital Letters Count in \'Hi, How are yOU Today\': " << clsString::CountCapitalLetters("Hi, How are yOU Today") << endl;
+     cout << "\n Capital Letters Count in \'S1\': " << clsString::CountCapitalLetters("S1") << endl;
 
      // Example 3:
      cout << "\n Example 3: CountLetters()\n";
 
-     cout << "\n Capital Letters Count in \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::CapitalLetters);
-     cout << "\n Small Letters Count in \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::SmallLetters);
-     cout << "\n All Letters Count in \'Hi, How are yOU Today\': " << clsString::CountLetters("Hi, How are yOU Today", clsString::All) << endl;
+     string S1 = "Hi, How are yOU Today";
+
+     cout << "\n Capital Letters Count in \'" << S1 << "\': " << clsString::CountLetters(S1, clsString::CapitalLetters);
+     cout << "\n Small Letters Count in \'" << S1 << "\': " << clsString::CountLetters(S1, clsString::SmallLetters);
+     cout << "\n All Letters Count in \'" << S1 << "\': " << clsString::CountLetters(S1, clsString::All) << endl;
 
      // Example 4:
      cout << "\n Example 4:CountSmallLetters()\n";
 
      cout << "\n Small Letters Count in String1: " << String1.CountSmallLetters();
      cout << "\n Small Letters Count in String2: " << String2.CountSmallLetters();
-     cout << "\n Small Letters Count in \'Hi, How are yOU Today\': " << clsString::CountSmallLetters("Hi, How are yOU Today") << endl;
+     cout << "\n Small Letters Count in \'" << S1 << "\': " << clsString::CountSmallLetters(S1) << endl;
 
      // Example 5:
      cout << "\n Example 5: CountSpecificLetter()\n";
 
      cout << "\n letter l count in String1 (Matching case): " << String1.CountSpecificLetter('l');
      cout << "\n letter l count in String1 (Without Matching case): " << String1.CountSpecificLetter('l', false);
-     cout << "\n letter o count in \'Hi, How are yOU Today\' (Matching case): " << clsString::CountSpecificLetter("Hi, How are yOU Today", 'o');
-     cout << "\n letter o count in \'Hi, How are yOU Today\' (Without Matching case): " << clsString::CountSpecificLetter("Hi, How are yOU Today", 'o', false) << endl;
+     cout << "\n letter o count in\'" << S1 << "\' (Matching case): " << clsString::CountSpecificLetter(S1, 'o');
+     cout << "\n letter o count in \'" << S1 << "\' (Without Matching case): " << clsString::CountSpecificLetter(S1, 'o', false) << endl;
 
      // Example 6:
      cout << "\n Example 6:CountVowels()\n";
 
      cout << "\n Vowels Count in String1: " << String1.CountVowels();
      cout << "\n Vowels count in String1: " << String2.CountVowels();
-     cout << "\n Vowels count in \'Hi, How are yOU Today\': " << clsString::CountVowels("Hi, How are yOU Today") << endl;
+     cout << "\n Vowels count in \'" << S1 << "\': " << clsString::CountVowels(S1) << endl;
 
      // Example 7:
      cout << "\n Example 7:CountWords()\n";
 
      cout << "\n Words Count in String1: " << String1.CountWords();
      cout << "\n Words count in String1: " << String2.CountWords();
-     cout << "\n Words count in \'Hi, How are yOU Today\': " << clsString::CountWords("Hi, How are yOU Today") << endl;
+     cout << "\n Words count in \'" << S1 << "\': " << clsString::CountWords(S1) << endl;
 
      // Example 8:
      cout << "\n Example 8: InvertAllLettersCase()\n";
 
      String1.InvertAllLettersCase();
      cout << "\n String1 After Inverting its Letters Case: " << String1.GetValue();
-     cout << "\n \'Hi, How are yOU Today\' After Inverting its Letters Case: " << clsString::InvertAllLettersCase("Hi, How are yOU Today") << endl;
+     cout << "\n \'" << S1 << "\' After Inverting its Letters Case: " << clsString::InvertAllLettersCase(S1) << endl;
 
      // Example 9:
      cout << "\n Example 9: InvertLetterCase()\n";
@@ -86,22 +88,22 @@ int main()
 
      vector<string> vString = {"I", "love", "Programming.", "Programming", "is", "Fun."};
 
-     string S1 = clsString::Join(vString, " ");
+     string S2 = clsString::Join(vString, " ");
 
-     cout << "\n String From Vector: " << S1;
+     cout << "\n String From Vector: " << S2;
 
      string arrString[] = {"I", "love", "Programming.", "Programming", "is", "Fun."};
 
-     S1 = clsString::Join(arrString, 6, "###");
+     S2 = clsString::Join(arrString, 6, "###");
 
-     cout << "\n String From Array with ### delimiter: " << S1 << endl;
+     cout << "\n String From Array with ### delimiter: " << S2 << endl;
 
      // Example 12 Length():
      cout << "\n Example 12: Length()\n";
 
      cout << "\n Length of String1: " << String1.Length();
      cout << "\n Length of String2: " << String2.Length();
-     cout << "\n Length of \'Hi, How are yOU Today\': " << clsString::Length("Hi, How are yOU Today") << endl;
+     cout << "\n Length of \'" << S1 << "\': " << clsString::Length(S1) << endl;
 
      // Example 13 LowerAllString():
      cout << "\n Example 13: LowerAllString()\n";
@@ -109,7 +111,7 @@ int main()
      String1.LowerAllString();
      cout << "\n String1 After Lowering All its Case: " << String1.GetValue();
 
-     cout << "\n \'Hi, How are yOU Today\' After Lowering All its Case: " << clsString::LowerAllString("Hi, How are yOU Today") << endl;
+     cout << "\n \'" << S1 << "\' After Lowering All its Case: " << clsString::LowerAllString(S1) << endl;
 
      // Example 14 LowerFirstLetterOfEachWord():
      cout << "\n Example 14: LowerFirstLetterOfEachWord()\n";
@@ -117,7 +119,7 @@ int main()
      String1.LowerFirstLetterOfEachWord();
      cout << "\n String1 After Lowering First Letter Of Each Word: " << String1.GetValue();
 
-     cout << "\n \'Hi, How are yOU Today\' After Lowering First Letter Of Each Word: " << clsString::LowerFirstLetterOfEachWord("Hi, How are yOU Today") << endl;
+     cout << "\n \'" << S1 << "\' After Lowering First Letter Of Each Word: " << clsString::LowerFirstLetterOfEachWord(S1) << endl;
 
      // Example 15 PrintEachWordInString():
      cout << "\n Example 15: PrintEachWordInString()\n";
@@ -126,8 +128,8 @@ int main()
 
      String1.PrintEachWordInString();
 
-     cout << "\n \'Hi, How are yOU Today\' Words:\n";
-     clsString::PrintEachWordInString("Hi, How are yOU Today");
+     cout << "\n \'" << S1 << "\' Words:\n";
+     clsString::PrintEachWordInString(S1);
 
      // Example 16 PrintEachWordInString():
      cout << "\n Example 16: PrintFirstLetterOfEachWord()\n";
@@ -136,8 +138,8 @@ int main()
 
      String1.PrintFirstLetterOfEachWord();
 
-     cout << "\n First Letter Of Each Word in \'Hi, How are yOU Today\':\n";
-     clsString::PrintFirstLetterOfEachWord("Hi, How are yOU Today");
+     cout << "\n First Letter Of Each Word in \'" << S1 << "\'\n";
+     clsString::PrintFirstLetterOfEachWord(S1);
 
      // Example 17 PrintVowels():
      cout << "\n Example 17: PrintVowels()\n";
@@ -146,8 +148,8 @@ int main()
 
      String1.PrintVowels();
 
-     cout << "\n Vowels in \'Hi, How are yOU Today\':\n";
-     clsString::PrintVowels("Hi, How are yOU Today");
+     cout << "\n Vowels in \'" << S1 << "\':\n";
+     clsString::PrintVowels(S1);
 
      // Example 18 RemovePunctuationsInString():
      cout << "\n Example 18: RemovePunctuationsInString()\n";
@@ -163,7 +165,7 @@ int main()
      cout << "\n Example 19: ReplaceWord()\n";
 
      cout << "\n String2 after Replacing Programming with Coding:\n\n "
-          << String2.ReplaceWord("Programming", "Coding") << endl;
+          << String2.ReplaceWord("Programming", "Coding", true) << endl;
 
      cout << "\n Replacing Jordan with Morocco in \'Welcome to Jordan jordan is a nice country.\'(Maching Case):\n\n "
           << clsString::ReplaceWord("Welcome to Jordan jordan is a nice country", "Jordan", "Morocco", true) << endl;
@@ -205,6 +207,21 @@ int main()
      {
           cout << " " << s << endl;
      }
+
+     // Example 12 Trim(), TrimLeft(), TrimRight():
+     cout << "\n Example 12: TrimLeft(), TrimRight(), Trim()\n";
+
+     clsString String3("   Hello, How are you doing?   ");
+     String3.TrimRight();
+     cout << "\n Trim Right: " << String3.GetValue() << endl;
+
+     String3.SetValue("   Hello, How are you doing?   ");
+     String3.TrimLeft();
+     cout << "\n Trim Left : " << String3.GetValue() << endl;
+
+     String3.SetValue("   Hello, How are you doing?   ");
+     String3.Trim();
+     cout << "\n Trim      : " << String3.GetValue() << endl;
 
      system("pause>0");
 
