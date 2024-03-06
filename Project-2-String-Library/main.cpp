@@ -7,7 +7,7 @@ int main()
      // Example 1:
      cout << "\n Example 1:\n";
 
-     clsString String1("Hello worLd!");
+     clsString String1("Hello, worLd!");
      clsString String2;
 
      String2.SetValue("Programming is Fun");
@@ -148,6 +148,16 @@ int main()
 
      cout << "\n Vowels in \'Hi, How are yOU Today\':\n";
      clsString::PrintVowels("Hi, How are yOU Today");
+
+     // Example 18 RemovePunctuationsInString():
+     cout << "\n Example 18: RemovePunctuationsInString()\n";
+
+     String1.RemovePunctuationsInString();
+
+     cout << "\n String1 after Removing Punctuations: " << String1.GetValue() << endl;
+
+     cout << "\n \'This is: a sample text, with punctuations.\'after Removing Punctuations:"
+          << clsString::RemovePunctuationsInString("This is: a sample text, with punctuations.") << endl;
 
      system("pause>0");
 
