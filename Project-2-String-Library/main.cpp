@@ -81,6 +81,21 @@ int main()
      else
           cout << "\n " << Letter << " is NOT a Vowel\n";
 
+     // Example 11:
+     cout << "\n Example 11: Join()\n";
+
+     vector<string> vString = {"I", "love", "Programming.", "Programming", "is", "Fun."};
+
+     string S1 = clsString::Join(vString, " ");
+
+     cout << "\n String From Vector: " << S1;
+
+     string arrString[] = {"I", "love", "Programming.", "Programming", "is", "Fun."};
+
+     S1 = clsString::Join(arrString, 6, "###");
+
+     cout << "\n String From Array with ### delimiter: " << S1 << endl;
+
      system("pause>0");
      return 0;
 }

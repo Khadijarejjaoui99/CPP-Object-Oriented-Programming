@@ -408,7 +408,7 @@ public:
         _Value = Trim(_Value);
     }
 
-    static string JoinString(vector<string> vString, string Delim)
+    static string Join(vector<string> vString, string Delim)
     {
         string S1 = "";
 
@@ -420,7 +420,7 @@ public:
         return S1.substr(0, S1.length() - Delim.length());
     }
 
-    static string JoinString(string arrString[], short Length, string Delim)
+    static string Join(string arrString[], short Length, string Delim)
     {
         string S1 = "";
 
@@ -474,7 +474,7 @@ public:
             }
         }
 
-        return JoinString(vString, " ");
+        return Join(vString, " ");
     }
 
     string ReplaceWord(string StringToReplace, string sReplaceTo, bool MatchCase = true)
