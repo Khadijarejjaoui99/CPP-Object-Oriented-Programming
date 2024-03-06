@@ -263,12 +263,12 @@ public:
 
     static void PrintVowels(string S1)
     {
-        cout << "\n Vowels in string are: ";
+        cout << " ";
 
         for (short i = 0; i < S1.length(); i++)
         {
             if (IsVowel(S1[i]))
-                cout << S1[i] << "  ";
+                cout << S1[i] << " ";
         }
 
         cout << endl;
