@@ -103,6 +103,14 @@ int main()
      cout << "\n Length of String2: " << String2.Length();
      cout << "\n Length of \'Hi, How are yOU Today\': " << clsString::Length("Hi, How are yOU Today") << endl;
 
+     // Example 13 LowerAllString():
+     cout << "\n Example 13: LowerAllString()\n";
+
+     String1.LowerAllString();
+     cout << "\n String1 After Lowering All its Case: " << String1.GetValue();
+
+     cout << "\n  \'Hi, How are yOU Today\' After Lowering All its Case: " << clsString::LowerAllString("Hi, How are yOU Today") << endl;
+
      system("pause>0");
 
      return 0;
