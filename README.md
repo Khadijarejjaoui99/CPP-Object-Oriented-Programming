@@ -1,2 +1,2 @@
 CPP OBJECT ORIENTED PROGRAMMING 
-Project 1: 
+Project 1: Small calculator 
