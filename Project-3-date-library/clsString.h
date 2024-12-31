@@ -1,17 +1,11 @@
-
-// ProgrammingAdvices.com
-// Mohammed Abu-Hadhoud
-
 #pragma once
-
 #include <iostream>
+#include <string>
 #include <vector>
-
 using namespace std;
 
 class clsString
 {
-
 private:
     string _Value;
 
@@ -36,64 +30,42 @@ public:
         return _Value;
     }
 
-    __declspec(property(get = GetValue, put = SetValue)) string Value;
-
     static short Length(string S1)
     {
         return S1.length();
-    };
+    }
 
     short Length()
     {
-        return _Value.length();
-    };
-
-    static short CountWords(string S1)
-    {
-
-        string delim = " "; // delimiter
-        short Counter = 0;
-        short pos = 0;
-        string sWord; // define a string variable
-
-        // use find() function to get the position of the delimiters
-        while ((pos = S1.find(delim)) != std::string::npos)
-        {
-            sWord = S1.substr(0, pos); // store the word
-            if (sWord != "")
-            {
-                Counter++;
-            }
-
-            // erase() until positon and move to next word.
-            S1.erase(0, pos + delim.length());
-        }
-
-        if (S1 != "")
-        {
-            Counter++; // it counts the last word of the string.
-        }
-
-        return Counter;
+        return Length(_Value);
     }
 
-    short CountWords()
+    static void PrintFirstLetterOfEachWord(string S1)
     {
-        return CountWords(_Value);
-    };
-
-    static string UpperFirstLetterOfEachWord(string S1)
-    {
-
         bool isFirstLetter = true;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
             if (S1[i] != ' ' && isFirstLetter)
-            {
+                cout << " " << S1[i] << "\n";
+
+            isFirstLetter = (S1[i] == ' ' ? true : false);
+        }
+    }
+
+    void PrintFirstLetterOfEachWord()
+    {
+        PrintFirstLetterOfEachWord(_Value);
+    }
+
+    static string UpperFirstLetterOfEachWord(string S1)
+    {
+        bool isFirstLetter = true;
+
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (S1[i] != ' ' && isFirstLetter)
                 S1[i] = toupper(S1[i]);
-            }
 
             isFirstLetter = (S1[i] == ' ' ? true : false);
         }
@@ -103,22 +75,17 @@ public:
 
     void UpperFirstLetterOfEachWord()
     {
-        // no need to return value , this function will directly update the object value
         _Value = UpperFirstLetterOfEachWord(_Value);
     }
 
     static string LowerFirstLetterOfEachWord(string S1)
     {
-
         bool isFirstLetter = true;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
             if (S1[i] != ' ' && isFirstLetter)
-            {
                 S1[i] = tolower(S1[i]);
-            }
 
             isFirstLetter = (S1[i] == ' ' ? true : false);
         }
@@ -128,17 +95,14 @@ public:
 
     void LowerFirstLetterOfEachWord()
     {
-
-        // no need to return value , this function will directly update the object value
         _Value = LowerFirstLetterOfEachWord(_Value);
     }
 
     static string UpperAllString(string S1)
     {
         for (short i = 0; i < S1.length(); i++)
-        {
             S1[i] = toupper(S1[i]);
-        }
+
         return S1;
     }
 
@@ -150,9 +114,8 @@ public:
     static string LowerAllString(string S1)
     {
         for (short i = 0; i < S1.length(); i++)
-        {
             S1[i] = tolower(S1[i]);
-        }
+
         return S1;
     }
 
@@ -161,9 +124,9 @@ public:
         _Value = LowerAllString(_Value);
     }
 
-    static char InvertLetterCase(char char1)
+    static char InvertLetterCase(char C)
     {
-        return isupper(char1) ? tolower(char1) : toupper(char1);
+        return isupper(C) ? tolower(C) : toupper(C);
     }
 
     static string InvertAllLettersCase(string S1)
@@ -172,6 +135,7 @@ public:
         {
             S1[i] = InvertLetterCase(S1[i]);
         }
+
         return S1;
     }
 
@@ -212,12 +176,10 @@ public:
 
     static short CountCapitalLetters(string S1)
     {
-
         short Counter = 0;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
             if (isupper(S1[i]))
                 Counter++;
         }
@@ -232,12 +194,10 @@ public:
 
     static short CountSmallLetters(string S1)
     {
-
         short Counter = 0;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
             if (islower(S1[i]))
                 Counter++;
         }
@@ -250,15 +210,13 @@ public:
         return CountSmallLetters(_Value);
     }
 
-    static short CountSpecificLetter(string S1, char Letter, bool MatchCase = true)
+    static short CountSpecificLetter(string S1, char Letter, bool isMatchCase = true)
     {
-
         short Counter = 0;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
-            if (MatchCase)
+            if (isMatchCase)
             {
                 if (S1[i] == Letter)
                     Counter++;
@@ -273,26 +231,24 @@ public:
         return Counter;
     }
 
-    short CountSpecificLetter(char Letter, bool MatchCase = true)
+    short CountSpecificLetter(char Letter, bool isMatchCase = true)
     {
-        return CountSpecificLetter(_Value, Letter, MatchCase);
+        return CountSpecificLetter(_Value, Letter, isMatchCase);
     }
 
-    static bool IsVowel(char Ch1)
+    static bool IsVowel(char Letter)
     {
-        Ch1 = tolower(Ch1);
+        Letter = tolower(Letter);
 
-        return ((Ch1 == 'a') || (Ch1 == 'e') || (Ch1 == 'i') || (Ch1 == 'o') || (Ch1 == 'u'));
+        return ((Letter == 'a') || (Letter == 'e') || (Letter == 'i') || (Letter == 'o') || (Letter == 'u'));
     }
 
     static short CountVowels(string S1)
     {
-
         short Counter = 0;
 
         for (short i = 0; i < S1.length(); i++)
         {
-
             if (IsVowel(S1[i]))
                 Counter++;
         }
@@ -305,30 +261,93 @@ public:
         return CountVowels(_Value);
     }
 
-    static vector<string> Split(string S1, string Delim)
+    static void PrintVowels(string S1)
     {
+        cout << " ";
 
-        vector<string> vString;
+        for (short i = 0; i < S1.length(); i++)
+        {
+            if (IsVowel(S1[i]))
+                cout << S1[i] << " ";
+        }
 
+        cout << endl;
+    }
+
+    void PrintVowels()
+    {
+        PrintVowels(_Value);
+    }
+
+    static void PrintEachWordInString(string S1)
+    {
+        string Delim = " ", sWord = "";
         short pos = 0;
-        string sWord; // define a string variable
 
-        // use find() function to get the position of the delimiters
         while ((pos = S1.find(Delim)) != std::string::npos)
         {
-            sWord = S1.substr(0, pos); // store the word
-            if (sWord != "")
-            {
-                vString.push_back(sWord);
-            }
+            sWord = S1.substr(0, pos);
 
-            S1.erase(0, pos + Delim.length()); /* erase() until positon and move to next word. */
+            if (sWord != "")
+                cout << " " << sWord << endl;
+
+            S1.erase(0, pos + Delim.length());
         }
 
         if (S1 != "")
+            cout << " " << S1 << endl;
+    }
+
+    void PrintEachWordInString()
+    {
+        PrintEachWordInString(_Value);
+    }
+
+    static short CountWords(string S1)
+    {
+        string Delim = " ", sWord = "";
+
+        short pos = 0, Counter = 0;
+
+        while ((pos = S1.find(Delim)) != std::string::npos)
         {
-            vString.push_back(S1); // it adds last word of the string.
+            sWord = S1.substr(0, pos);
+
+            if (sWord != "")
+                Counter++;
+
+            S1.erase(0, pos + Delim.length());
         }
+
+        if (S1 != "")
+            Counter++;
+
+        return Counter;
+    }
+
+    short CountWords()
+    {
+        return CountWords(_Value);
+    }
+
+    static vector<string> Split(string S1, string Delim)
+    {
+        string sWord = "";
+        short pos = 0;
+        vector<string> vString;
+
+        while ((pos = S1.find(Delim)) != std::string::npos)
+        {
+            sWord = S1.substr(0, pos);
+
+            if (sWord != "")
+                vString.push_back(sWord);
+
+            S1.erase(0, pos + Delim.length());
+        }
+
+        if (S1 != "")
+            vString.push_back(S1);
 
         return vString;
     }
@@ -340,7 +359,6 @@ public:
 
     static string TrimLeft(string S1)
     {
-
         for (short i = 0; i < S1.length(); i++)
         {
             if (S1[i] != ' ')
@@ -348,6 +366,7 @@ public:
                 return S1.substr(i, S1.length() - i);
             }
         }
+
         return "";
     }
 
@@ -366,6 +385,7 @@ public:
                 return S1.substr(0, i + 1);
             }
         }
+
         return "";
     }
 
@@ -376,7 +396,7 @@ public:
 
     static string Trim(string S1)
     {
-        return (TrimLeft(TrimRight(S1)));
+        return TrimLeft(TrimRight(S1));
     }
 
     void Trim()
@@ -384,96 +404,82 @@ public:
         _Value = Trim(_Value);
     }
 
-    static string JoinString(vector<string> vString, string Delim)
+    static string Join(vector<string> vString, string Delim)
     {
-
         string S1 = "";
 
-        for (string &s : vString)
+        for (string &S : vString)
         {
-            S1 = S1 + s + Delim;
+            S1 += S + Delim;
         }
 
         return S1.substr(0, S1.length() - Delim.length());
     }
 
-    static string JoinString(string arrString[], short Length, string Delim)
+    static string Join(string arrString[], short Length, string Delim)
     {
-
         string S1 = "";
 
-        for (short i = 0; i < Length; i++)
+        for (int i = 0; i < Length; i++)
         {
-            S1 = S1 + arrString[i] + Delim;
+            S1 += arrString[i] + Delim;
         }
 
         return S1.substr(0, S1.length() - Delim.length());
     }
 
-    static string ReverseWordsInString(string S1)
+    static string ReverseWords(string S1)
     {
-
         vector<string> vString;
         string S2 = "";
 
         vString = Split(S1, " ");
 
-        // declare iterator
         vector<string>::iterator iter = vString.end();
 
         while (iter != vString.begin())
         {
-
             --iter;
 
             S2 += *iter + " ";
         }
 
-        S2 = S2.substr(0, S2.length() - 1); // remove last space.
-
-        return S2;
+        return S2.substr(0, S2.length() - 1);
     }
 
-    void ReverseWordsInString()
+    void ReverseWords()
     {
-        _Value = ReverseWordsInString(_Value);
+        _Value = ReverseWords(_Value);
     }
 
-    static string ReplaceWord(string S1, string StringToReplace, string sRepalceTo, bool MatchCase = true)
+    static string ReplaceWord(string S1, string StringToReplace, string sReplaceTo, bool MatchCase = true)
     {
-
         vector<string> vString = Split(S1, " ");
 
         for (string &s : vString)
         {
-
             if (MatchCase)
             {
                 if (s == StringToReplace)
-                {
-                    s = sRepalceTo;
-                }
+                    s = sReplaceTo;
             }
             else
             {
                 if (LowerAllString(s) == LowerAllString(StringToReplace))
-                {
-                    s = sRepalceTo;
-                }
+                    s = sReplaceTo;
             }
         }
 
-        return JoinString(vString, " ");
+        return Join(vString, " ");
     }
 
-    string ReplaceWord(string StringToReplace, string sRepalceTo)
+    string ReplaceWord(string StringToReplace, string sReplaceTo, bool MatchCase)
     {
-        return ReplaceWord(_Value, StringToReplace, sRepalceTo);
+        return ReplaceWord(_Value, StringToReplace, sReplaceTo, MatchCase);
     }
 
-    static string RemovePunctuations(string S1)
+    static string RemovePunctuationsInString(string S1)
     {
-
         string S2 = "";
 
         for (short i = 0; i < S1.length(); i++)
@@ -487,8 +493,8 @@ public:
         return S2;
     }
 
-    void RemovePunctuations()
+    void RemovePunctuationsInString()
     {
-        _Value = RemovePunctuations(_Value);
+        _Value = RemovePunctuationsInString(_Value);
     }
 };
